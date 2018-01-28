@@ -231,7 +231,7 @@ function init() {
     ctx.clearRect(0, 0, width, height);
     ctx.fillStyle="#FF0000";
     image = new Image();
-    image.src = 'field.png';
+    image.src = 'Arcade.png';
     image.onload = function(){
         ctx.drawImage(image, 0, 0, width, height);
         update();
@@ -428,19 +428,19 @@ function getDataString() {
 
 import java.util.ArrayList;
 
-import com.team254.frc2017.paths.PathBuilder.Waypoint;
-import com.team254.lib.util.control.Path;
-import com.team254.lib.util.math.RigidTransform2d;
-import com.team254.lib.util.math.Rotation2d;
-import com.team254.lib.util.math.Translation2d;
+import org.usfirst.frc.team3042.robot.paths.PathBuilder.Waypoint;
+import org.usfirst.frc.team3042.lib.Path;
+import org.usfirst.frc.team3042.lib.math.RigidTransform2d;
+import org.usfirst.frc.team3042.lib.math.Rotation2d;
+import org.usfirst.frc.team3042.lib.math.Translation2d;
 
 public class ${title} implements PathContainer {
     
     @Override
     public Path buildPath() {
-        ArrayList<Waypoint> sWaypoints = new ArrayList<Waypoint>();
+        ArrayList<Waypoint> waypoints = new ArrayList<Waypoint>();
 ${pathInit}
-        return PathBuilder.buildPathFromWaypoints(sWaypoints);
+        return PathBuilder.buildPathFromWaypoints(waypoints);
     }
     
     @Override
