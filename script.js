@@ -4,8 +4,8 @@ var width = 1656; //pixels
 var height = 823; //pixels
 var fieldWidth = 652; // in inches
 var fieldHeight = 324; // in inches
-var robotWidth = 35.45; //inches
-var robotHeight = 33.325; //inches
+var robotWidth = 34.5; //inches
+var robotHeight = 38.5; //inches
 var pointRadius = 5;
 var turnRadius = 30;
 var kEpsilon = 1E-9;
@@ -99,7 +99,7 @@ class Waypoint {
 
 	toString() {
 		var comment = (this.comment.length > 0) ? " //" + this.comment : "";
-		return "sWaypoints.add(new Waypoint("+this.position.x+","+this.position.y+","+this.radius+","+this.speed+"));" + comment;
+		return "waypoints.add(new Waypoint("+this.position.x+","+this.position.y+","+this.radius+","+this.speed+"));" + comment;
 	}
 }
 
